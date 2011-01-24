@@ -5,6 +5,18 @@ body {
     padding: 0;
 }
 
+p {
+    text-align: center;
+}
+
+a img {
+    border: none;
+}
+
+h1 {
+    text-align: center;
+}
+
 #logo {
     display: block;
     margin: auto;
@@ -19,7 +31,7 @@ body {
 }
 
 #feed-url {
-    font-size: 14px;
+    font-size: 12px;
     padding: 5px;
     width: 600px;
     text-align: center;
@@ -35,6 +47,10 @@ form {
     width: 620px;
     margin: auto;
     padding: 10px;
+    display: block;
+}
+
+#intro p {
     text-align: justify;
 }
 
@@ -44,7 +60,53 @@ form {
 }
 
 #legal {
+    display: block;
     font-size: 10px;
-    margin-top: 20px;
+    margin: 20px 0 10px 0;
     text-align: center;
+}
+
+.blurb {
+    text-align: center;
+}
+
+#items {
+    width: 80%;
+    margin: auto;
+}
+
+.item {
+    clear: both;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.item .title {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.item .image {
+    float: left;
+    margin-left: 10px;
+}
+
+.item .description {
+    margin-left: 85px;
+    text-align: justify;
+}
+
+.clear { clear: both; }
+
+nav { 
+    display: block;
+}
+nav a {
+    font-weight: bold;
+}
+
+a { 
+    text-decoration: none;
+    color: #2F641C;
 }

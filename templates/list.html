@@ -6,15 +6,19 @@
 
 <h1>{{ title }}</h1>
 
+<p class="blurb">This Netflix queue is being published via QueueCumBeR. <a href="/">Publish your own</a>.</p>
+
+<div id="items">
 {% for item in items %}
-	<ul>
-		<li><b>position:</b> {{ item.position }}</li>
-		<li><b>title:</b> {{ item.title }}</li>
-		<li><b>description:</b> {{ item.description }}</li>
-		<li><img src="{{ item.image }}" /></li>
-		<li><b>link:</b> {{ item.link }}</li>
-	</ul>
-<hr />
+	<div class="item">
+		<div class="title">{% if item.position %}{{ item.position }}. {% endif %}<a href="{{ item.link }}">{{ item.title }}</a></div>
+		<div class="image">
+			<a href="{{ item.link }}"><img src="{{ item.image }}" /></a>
+		</div>
+		<div class="description">{{ item.description }}</div>
+		<div class="clear"></div>
+	</div>
 {% endfor %}
+</div>
 
 {% endblock %}

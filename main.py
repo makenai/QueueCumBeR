@@ -17,6 +17,14 @@ class RegisterHandler(webapp.RequestHandler):
       except Exception, reason:
         self.response.out.write( template.render('templates/error.html', { 'reason': reason }) )
 
+class RandomHandler(webapp.RequestHandler):
+  def get(self):
+      feed = RegisteredFeed.random()
+      if feed is None:
+        self.redirect("/")
+      else:
+        self.redirect("/" + feed.slug)
+
 class PageHandler(webapp.RequestHandler):
   def get(self,page):
     self.response.out.write( template.render('templates/' + page + '.html', {}) )
@@ -44,6 +52,7 @@ def main():
     application = webapp.WSGIApplication([
       ('/', MainHandler),
       ('/register', RegisterHandler),
+      ('/random', RandomHandler),      
       ('/(about|help)', PageHandler),
       ('/(.*)', DisplayHandler)
     ], debug=True)

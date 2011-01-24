@@ -1,10 +1,13 @@
 {% extends "main.html" %}
 
 {% block content %}
-<h2>Error</h2>
+<h1>Horrible Error</h1>
+<p>
 {% if reason %}
-	There was an error: {{reason}}
+	This is your problem: {{reason}}
 {% else %}
 	An unknown error has occurred.
 {% endif %}
+</p>
+<p><a href="/">Okay, take me home, error page.</a></p>
 {% endblock %}

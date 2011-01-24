@@ -11,22 +11,40 @@
 	<img src="/img/qcbr.png" id="logo" />
 	
 	<section id="intro">
-		QueueCumBeR is here to provide hassle free Netflix Queue sharing. No authentication or login required, just copy and paste
-		the the RSS feed url from the <a href="http://www.netflix.com/RSSFeeds?lnkctr=mfRSS" target="_blank">RSS feeds page</a> of
-		your Netflix account, share the link with your friends and you're ready to go!
+		<p>QueueCumBeR is here to provide hassle-free Netflix queue sharing over the interwebs.</p>
+		<ol>
+			<li><a href="https://www.netflix.com/Login" rel="nofollow" target="le_netflix">Log In</a> to Netflix (if not already)</li>
+			<li>Go to your personal <a href="http://www.netflix.com/RSSFeeds?lnkctr=mfRSS" rel="nofollow" target="le_netflix">RSS feeds page</a></li>
+			<li>Paste it below and Go!</li>
+		</ol>
 	</section>
 	
 	<form method="post" action="/register">
-		<input type="url" name="feed_url" placeholder="Netflix RSS Feed URL" value="http://rss.netflix.com/QueueEDRSS?id=P1919258166891473108625044146359954" id="feed-url" />
+		<input type="url" name="feed_url" placeholder="Netflix RSS Feed URL Goes Here" id="feed-url" />
 		<button type="submit">Go</button>
 	</form>
-
+	
 	<nav id="bottom-links">
-		<a href="/help">Help</a> | <a href="/about">About</a>
+		<a href="/help">Help</a> | 
+		<a href="/about">About</a> |
+		<a href="/random">Random</a>
 	</nav>
 	{% endblock %}
 	<footer id="legal">
-		&copy; 2011 QueueCumBeR. This service is not affiliated with <a href="http://netflix.com">Netflix</a>. Not even a little bit.
+		&copy; 2011 QueueCumBeR. This service is not affiliated with <a href="http://netflix.com" rel="nofollow">Netflix</a>. Not even a little bit.
 	</footer>	
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-20933366-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
 </body>
 </html>
