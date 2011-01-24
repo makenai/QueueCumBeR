@@ -1,0 +1,50 @@
+* { font-family: Verdana; }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    display: block;
+    margin: auto;
+}
+
+#top-bar {
+    text-align: left;
+    height: 28px;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+    background-color: #DDF7D4;
+}
+
+#feed-url {
+    font-size: 14px;
+    padding: 5px;
+    width: 600px;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+form {
+    text-align: center;
+}
+
+#intro {
+    width: 620px;
+    margin: auto;
+    padding: 10px;
+    text-align: justify;
+}
+
+#bottom-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#legal {
+    font-size: 10px;
+    margin-top: 20px;
+    text-align: center;
+}

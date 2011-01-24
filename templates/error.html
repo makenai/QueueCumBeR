@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+
+{% block content %}
+<h2>Error</h2>
+{% if reason %}
+	There was an error: {{reason}}
+{% else %}
+	An unknown error has occurred.
+{% endif %}
+{% endblock %}

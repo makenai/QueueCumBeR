@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% block content %}
+<div id="top-bar">
+	<a href="/"><img src="/img/qcbr-bar.png" /></a>
+</div>
+
+<h1>{{ title }}</h1>
+
+{% for item in items %}
+	<ul>
+		<li><b>position:</b> {{ item.position }}</li>
+		<li><b>title:</b> {{ item.title }}</li>
+		<li><b>description:</b> {{ item.description }}</li>
+		<li><img src="{{ item.image }}" /></li>
+		<li><b>link:</b> {{ item.link }}</li>
+	</ul>
+<hr />
+{% endfor %}
+
+{% endblock %}
