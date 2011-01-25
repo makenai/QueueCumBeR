@@ -1,17 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>QueueCumBeR</title>
+	<title>QueueCumBeR - Share your Netflix queue with ease</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="/css/qcbr.css" />
-	<!-- <link rel="shortcut icon" href="/img/favicon.png"> -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+	<script src="/js/qcbr.js" type="text/javascript"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+	{% block meta %}
+	{% endblock %}
 </head>
 <body>
 	{% block content %}
-	<img src="/img/qcbr.png" id="logo" />
+	<img src="/img/qcbr.png" width="260" height="148" alt="QueueCumBeR" id="logo" />
 	
 	<section id="intro">
-		<p>QueueCumBeR is here to provide hassle-free Netflix queue sharing over the interwebs.</p>
+		<p>QueueCumBeR is here to provide hassle-free Netflix queue sharing and publishing over the interwebs.</p>
 		<ol>
 			<li><a href="https://www.netflix.com/Login" rel="nofollow" target="le_netflix">Log In</a> to Netflix (if not already)</li>
 			<li>Go to your personal <a href="http://www.netflix.com/RSSFeeds?lnkctr=mfRSS" rel="nofollow" target="le_netflix">RSS feeds page</a></li>
@@ -32,6 +36,7 @@
 	{% endblock %}
 	<footer id="legal">
 		&copy; 2011 QueueCumBeR. This service is not affiliated with <a href="http://netflix.com" rel="nofollow">Netflix</a>. Not even a little bit.
+		<div>Have feedback? Tweet <a href="http://twitter.com/makenai">@makenai</a>.</div>
 	</footer>	
 	<script type="text/javascript">
 

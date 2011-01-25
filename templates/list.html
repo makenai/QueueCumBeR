@@ -1,12 +1,29 @@
 {% extends "main.html" %}
+
+{% block meta %}
+	<meta property="og:title" content="{{ title }}" />
+	<meta property="og:description" content="I'm sharing a Netflix queue via QueueCumBer!" />
+	<meta property="og:image" content="{{ items.0.image }}" />
+{% endblock %}
+
 {% block content %}
 <div id="top-bar">
-	<a href="/"><img src="/img/qcbr-bar.png" /></a>
+	<a href="/"><img src="/img/qcbr-bar.png" width="110" height="28" alt="QueueCumBeR" /></a>
 </div>
 
 <h1>{{ title }}</h1>
 
-<p class="blurb">This Netflix queue is being published via QueueCumBeR. <a href="/">Publish your own</a>.</p>
+<p class="blurb">This Netflix queue is being published and shared via QueueCumBeR. <a href="/">Publish your own</a>.</p>
+
+<div id="share">
+	Share via:
+	<a href="http://twitter.com/share?url=http%3A%2F%2Fu.qcbr.me%2F{{slug}}&text=I'm%20sharing%20a%20Netflix%20queue%20via%20QueueCumBer!">
+		<img src="/img/twitter_32.png" width="32" height="23" alt="Twitter" />
+	</a>
+	<a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fu.qcbr.me%2F{{slug}}&t=I'm%20sharing%20a%20Netflix%20queue%20via%20QueueCumBer!">
+		<img src="/img/facebook_32.png" width="28" height="23" alt="Facebook" />
+	</a>
+</div>
 
 <div id="items">
 {% for item in items %}
@@ -20,5 +37,4 @@
 	</div>
 {% endfor %}
 </div>
-
 {% endblock %}
